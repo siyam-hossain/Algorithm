@@ -4,3 +4,15 @@ Two type of Graph
 
 1) Directed Graph
 2) Undirected Graph
+
+
+base of weight Graph two type
+
+1) weighted Graph
+2) unweighted Graph
+
+
+Cycle
+
+1) Cyclic Graph
+2) Acyclic Graph

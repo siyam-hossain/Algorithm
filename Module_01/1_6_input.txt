@@ -1,0 +1,12 @@
+
+
+1) number of node
+2) edge number
+3) one by one connection, 
+    (if undirected : 0 3 = 0--3 or 3--0)
+    (if directed : 0 3 = 0-->3 not 3-->0 X)
+
+4) storing method: 
+    i) Adjacency matrix
+    ii) Adjacency List
+    iii) Edge List
