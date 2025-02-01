@@ -1,0 +1,6 @@
+
+
+Two type of Graph
+
+1) Directed Graph
+2) Undirected Graph
