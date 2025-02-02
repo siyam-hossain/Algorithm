@@ -1,0 +1,6 @@
+
+
+Travarsal method
+
+1) BFS (Breadth first search) [level order traval]
+2) DFS (Depth First Search) [Go to Depth when find NULL then back track then again Depth]
