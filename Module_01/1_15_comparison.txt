@@ -1,0 +1,11 @@
+
+1) check 2 nodes connected or not: 
+    adj_mat = O(1);
+    adj_list = O(N);
+    edge_list = O(N);
+
+
+2) all the connected nodes from a node: 
+    i) adj_list
+
+3) Only edge need
