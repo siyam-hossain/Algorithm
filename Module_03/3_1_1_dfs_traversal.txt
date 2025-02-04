@@ -1,0 +1,4 @@
+
+
+we use recursion to implement DFS
+we use adjacency list
