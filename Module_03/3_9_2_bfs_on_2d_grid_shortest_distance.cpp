@@ -5,6 +5,9 @@ int r,c;
 char grid[1005][1005];
 bool vis[1005][1005];
 vector< pair<int,int> > move_c = {{-1,0},{1,0},{0,-1},{0,1}};
+//track level
+int level[1005][1005];
+
 
 bool valid(int i, int j)
 {
@@ -18,6 +21,8 @@ void bfs(int si, int sj)
     queue<pair<int,int>> q;
     q.push({si,sj});
     vis[si][sj] = true;
+
+    level[si][sj]  = 0;
 
     while (!q.empty())
     {
@@ -37,6 +42,7 @@ void bfs(int si, int sj)
             {
                 q.push({ci,cj});
                 vis[ci][cj] = true; 
+                level[ci][cj] = level[par_i][par_j] + 1;
             }
         }
         
@@ -58,9 +64,13 @@ int main(int argc, char const *argv[])
         
     }
     int si, sj;
-    cin>>si>>sj;
+    //destination index
+    int di,dj;
+    cin >> si >> sj >> di >>dj;
     memset(vis,false,sizeof(vis));
+    memset(level, -1, sizeof(level));
     bfs(si,sj);
+    cout<<"distance: "<<level[di][dj]<<endl;
     return 0;
 }
 /*
@@ -72,5 +82,6 @@ input:
 
 1 2
 
-
+destination index
+2 0
 */
