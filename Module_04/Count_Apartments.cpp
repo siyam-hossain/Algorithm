@@ -23,7 +23,7 @@ void dfs(int si, int sj)
         int cr = si + move_c[i].first;
         int cl = sj + move_c[i].second;
 
-        if(valid(cr,cl) && vis[cr][cl] == false && (grid[cr][cl]=='.' || grid[cr][cl] == 'B')) //made mistake here
+        if(valid(cr,cl) && vis[cr][cl] == false && grid[cr][cl]=='.') //made mistake here
         {
             dfs(cr,cl);
         }
@@ -34,34 +34,36 @@ void dfs(int si, int sj)
 int main(int argc, char const *argv[])
 {
     cin>>r>>c;   
-    int si, sj, di, dj;
-    si = sj = di = dj = -1;
-
+    
     for (int i = 0; i < r; i++)
     {
         for (int j = 0; j < c; j++)
         {
             cin>>grid[i][j];
-            if(grid[i][j] == 'A') 
-            {
-                si = i;
-                sj = j;
-                continue;
-            }
-            else if (grid[i][j] == 'B')
-            {
-                di = i;
-                dj = j;
-                continue;
-            }
         }
         
     }
     memset(vis,false,sizeof(vis));
 
-    dfs(si,sj);
+    int num_aprt = 0;
 
-    cout<<((vis[di][dj]) ? "YES\n": "NO\n");
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            if(grid[i][j] == '.')
+            {
+                if(!vis[i][j])
+                {
+                    num_aprt++;
+                    dfs(i,j);
+                }
+            }
+        }
+        
+    }
+    
+    cout<<num_aprt;
    
     
     return 0;
@@ -70,11 +72,11 @@ int main(int argc, char const *argv[])
 input:
 5 8
 ########
-#.A#...#
-#.##.#B#
-#......#
+#..#...#
+####.#.#
+#..#...#
 ########
 
 output: 
-YES
+3
 */
