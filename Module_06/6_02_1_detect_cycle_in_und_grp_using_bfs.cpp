@@ -65,7 +65,7 @@ int main(int argc, char const *argv[])
             bfs(i);
     }
     
-    cout<<((cycle) ? "Detected Cycel\n": "No cycle\n");
+    cout<<((cycle) ? "Detected Cycle\n": "No cycle\n");
 
 
 

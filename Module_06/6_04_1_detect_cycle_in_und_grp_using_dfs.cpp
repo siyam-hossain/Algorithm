@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
     
 
 
-    cout<<((cycle) ? "Detected Cycel\n": "No cycle\n");
+    cout<<((cycle) ? "Detected Cycle\n": "No cycle\n");
 
 
 
