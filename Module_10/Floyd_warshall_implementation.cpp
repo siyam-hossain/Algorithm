@@ -55,8 +55,8 @@ int main(int argc, char const *argv[])
     {
         for (int j = 0; j < n; j++)
         {
-            if(adj_mat[i][j]==INT_MAX) cout<<"INF ";
-            else cout<<adj_mat[i][j]<<" ";
+            if(adj_mat[i][j]==INT_MAX) cout<<"INF"<<"\t\t";
+            else cout<<adj_mat[i][j]<<"\t\t";
         }cout<<endl;
     }
     
